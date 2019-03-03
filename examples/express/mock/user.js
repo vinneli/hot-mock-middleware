@@ -22,7 +22,7 @@ const proxy =  {
                 address: 'shenzhen'
             });
         }
-        res.send({
+        res.json({
             code: 0,
             message: 'success',
             page: req.params.page,

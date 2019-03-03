@@ -1,7 +1,7 @@
 const { delay } = require('roadhog-api-doc');
 
 const proxy =  {
-    "/product/detail/:id": (req, res) => {
+    "GET /product/detail/:id": (req, res) => {
         res.json({
             code: 0,
             message: 'success',
