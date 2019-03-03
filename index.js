@@ -1,3 +1,1 @@
-import createMiddleware from './lib/createMiddleware';
-
-export default createMiddleware;
+module.exports = require('./lib/createMiddleware');
