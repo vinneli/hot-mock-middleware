@@ -1,27 +1,23 @@
 #!/usr/bin/env node
 
 const path = require('path');
+const express = require('express');
 const webpack = require('webpack');
-const webpackDevServer = require('webpack-dev-server');
+const webpackDevMiddleware = require('webpack-dev-middleware');
 const mockMiddleware = require('../../../index.js');
 const config = require('../webpack.config.js');
 
-const options = {
-    contentBase: path.resolve(__dirname, '../dist'),
-    // 这样使用也可以
-    // before(app) {
-    //     app.use(mockMiddleware(
-    //         path.resolve(__dirname, '../mock'))
-    //     );
-    // }
-};
+const app = express();
 const compiler = webpack(config);
-const server = new webpackDevServer(compiler, options);
+app.use(webpackDevMiddleware(compiler, {
+    contentBase: path.resolve(__dirname, '../dist'),
+    open: true
+}));
 
-server.use(mockMiddleware(
+app.use(mockMiddleware(
     path.resolve(__dirname, '../mock')
 ));
 
-server.listen(3000, 'localhost', () => {
+app.listen(3000, function () {
     console.log('dev server listening on port 3000');
 });

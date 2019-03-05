@@ -19,7 +19,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Development',
             template: 'src/template.html'
-        })
+        }),
+        new webpack.NamedModulesPlugin(), 
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [
