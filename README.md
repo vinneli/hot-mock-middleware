@@ -1,6 +1,6 @@
-# express-mock-middleware
+# express-mock-creator
 
-`express-mock-middleware` 为 express 的 middleware， 能够指定一个目录，遍历此目录下的所有 js 文件做为 mock 数据，提供 mock 服务。支持数据的实时更新，不用重启进程。
+`express-mock-creator` 为 express 的 middleware， 能够指定一个目录，遍历此目录下的所有 js 文件做为 mock 数据，提供 mock 服务。支持数据的实时更新，不用重启进程。
 
 参考了 `umi-mock`， 接口文件的配置格式和 umi mock 一致。
 
@@ -8,16 +8,16 @@
 
 #### 1. 安装依赖
 ```shell
-npm install express express-mock-middleware --save-dev
+npm install express express-mock-creator --save-dev
 # or use yarn
-yarn add express express-mock-middleware --dev
+yarn add express express-mock-creator --dev
 ```
 
 #### 2. 写 express 服务
 ```js
 const express = require('express');
 const path = require('path');
-const mockMiddleware = require('express-mock-middleware');
+const mockMiddleware = require('express-mock-creator');
 
 const app = express();
 // 使用 middleware 指定 mock 目录
@@ -51,7 +51,7 @@ module.exports = {
 `src/setupProxy.js`: 
 ```js
 const path = require('path');
-const mockMiddleware = require('express-mock-middleware');
+const mockMiddleware = require('express-mock-creator');
 
 module.exports = app => {
     app.use(mockMiddleware(
