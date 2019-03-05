@@ -1,5 +1,5 @@
 {
-  "name": "express-mock-middleware",
+  "name": "express-mock-creator",
   "version": "0.1.0",
   "main": "index.js",
   "description": "Create a mock service for express",
@@ -21,10 +21,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vanni-li/express-mock-middleware"
+    "url": "https://github.com/vanni-li/express-mock-creator"
   },
-  "homepage": "https://github.com/vanni-li/express-mock-middleware",
-  "bugs": "https://github.com/vanni-li/express-mock-middleware/issues",
+  "homepage": "https://github.com/vanni-li/express-mock-creator",
+  "bugs": "https://github.com/vanni-li/express-mock-creator/issues",
   "authors": [
     "vanni <icoon@qq.com> (https://github.com/vanni-li)"
   ],
