@@ -13,7 +13,7 @@ $ npm install --save-dev hot-mock-middleware
 ```js
 const express = require('express');
 const path = require('path');
-const mockMiddleware = require('express-mock-creator');
+const mockMiddleware = require('hot-mock-middleware');
 
 const app = express();
 // Use middleware to create mock server
