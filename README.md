@@ -83,7 +83,7 @@ Let's add a script to easily run the dev server as well: `package.json`:
 Then you can add some mock files in `mock/` directory.
 
 ### Using with **create-react-app**
-To use with projects that created with create-react-app, add file under `src` directory: `src/setupProxy.js`:
+To use with projects that created with create-react-app, create `src/setupProxy.js` as follows: 
 ```js
 // src/setupProxy.js
 const path = require('path');
