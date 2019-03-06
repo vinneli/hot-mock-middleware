@@ -1,6 +1,6 @@
 {
   "name": "hot-mock-middleware",
-  "version": "1.1.5",
+  "version": "1.1.7",
   "main": "index.js",
   "description": "A express middleware that creates mock service simply, support for real-time refresh",
   "dependencies": {

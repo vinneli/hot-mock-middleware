@@ -1,13 +1,13 @@
 # hot-mock-middleware
 
-`hot-mock-middleware` is a express middleware that creates mock service. Your can specify a directory, the files under the directory are mock files that export interface definitions，support for real-time refresh based on 'require' dynamic analysis.
+A express middleware that creates mock server. Your can specify a directory, the files under the directory are mock files that export interface definitions，support for real-time refresh based on 'require' dynamic analysis.
 
-### Installation
+## Installation
 ```sh
 $ npm install --save-dev hot-mock-middleware
 ```
 
-### Quick start
+## Quick start
 
 1. Create a directory `mock-server`, then create the file `app.js`, the content is：
 ```js
@@ -47,9 +47,9 @@ $ node app.js
 ```
 
 The you can then access the <http://localhost:3000/api/users> to view API documents.   
-You can create more js files in the `mocks` directory, the mock service will automatically grab contents, also you can modify these files, ths api data will refresh real-time without restarting app.
+You can create more js files in the `mock` directory, the mock server will automatically grab contents, also you can modify these files, ths api data will refresh real-time without restarting app.
 
-### Using with **Webpack**
+## Using with Webpack
 To use with webpack projects, simply add a setup options to your webpack-dev-server options.  
 Change your config file `webpack.config.js`: 
 ```diff 
@@ -82,7 +82,7 @@ Let's add a script to easily run the dev server as well: `package.json`:
 ```
 Then you can add some mock files in `mock/` directory.
 
-### Using with **create-react-app**
+## Using with create-react-app
 To use with projects that created with create-react-app, create `src/setupProxy.js` as follows: 
 ```js
 // src/setupProxy.js
@@ -96,3 +96,10 @@ module.exports = app => {
 }
 ```
 Then you can add some mock files in `mock/` directory.
+
+## Demo
+- [Using with create-react-app](https://github.com/vanni-li/hot-mock-middleware/tree/master/examples/create-react-app)
+- [Using with express](https://github.com/vanni-li/hot-mock-middleware/tree/master/examples/express)
+- [Using with webpack](https://github.com/vanni-li/hot-mock-middleware/tree/master/examples/webpack-cli)
+- [Using with webpack-dev-server Node.js API](https://github.com/vanni-li/hot-mock-middleware/tree/master/examples/webpack-api)
+- [Using with express + webpack-dev-middleware](https://github.com/vanni-li/hot-mock-middleware/tree/master/examples/webpack-middleware)

@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const webpackDevServer = require('webpack-dev-server');
-const mockMiddleware = require('../../../index.js');
+const mockMiddleware = require('hot-mock-middleware');
 const config = require('../webpack.config.js');
 
 const options = {

@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
-const mockMiddleware = require('../../index.js');
+const mockMiddleware = require('hot-mock-middleware');
 
 module.exports = {
     mode: 'development',

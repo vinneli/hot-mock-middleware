@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
-const mockMiddleware = require('../../../index.js');
+const mockMiddleware = require('hot-mock-middleware');
 const config = require('../webpack.config.js');
 
 const app = express();
