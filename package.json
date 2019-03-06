@@ -1,8 +1,8 @@
 {
-  "name": "express-mock-creator",
-  "version": "0.1.1",
+  "name": "hot-mock-middleware",
+  "version": "1.1.4",
   "main": "index.js",
-  "description": "Create a mock service for express",
+  "description": "A express middleware that creates mock service simply, support for real-time refresh",
   "dependencies": {
     "body-parser": "1.18.3",
     "chokidar": "2.0.4",
@@ -21,10 +21,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vanni-li/express-mock-creator"
+    "url": "https://github.com/vanni-li/hot-mock-middleware"
   },
-  "homepage": "https://github.com/vanni-li/express-mock-creator",
-  "bugs": "https://github.com/vanni-li/express-mock-creator/issues",
+  "homepage": "https://github.com/vanni-li/hot-mock-middleware",
+  "bugs": "https://github.com/vanni-li/hot-mock-middleware/issues",
   "authors": [
     "vanni <icoon@qq.com> (https://github.com/vanni-li)"
   ],
