@@ -52,30 +52,29 @@ You can create more js files in the `mock` directory, the mock server will autom
 ## Using with Webpack
 To use with webpack projects, simply add a setup options to your webpack-dev-server options.  
 Change your config file `webpack.config.js`: 
-```diff 
-+ const path = require('path');
-+ const mockMiddleware = require('hot-mock-middleware');
+```js
+const path = require('path');
+const mockMiddleware = require('hot-mock-middleware');
 
 module.exports = {
     // ...
 
-+   devServer: {
-+       contentBase: './dist',
-+       before(app) {
-+           app.use(
-+               mockMiddleware(path.resolve(__dirname, 'mock'))
-+           );
-+       }
-+   }
+    devServer: {
+        before(app) {
+            app.use(
+                mockMiddleware(path.resolve(__dirname, 'mock'))
+            );
+        }
+    }
 
     // ...
 }
 ```
 Let's add a script to easily run the dev server as well: `package.json`: 
-```diff 
+```json
 {
     "scripts": {
-+       "start": "webpack-dev-server --open",
+        "start": "webpack-dev-server --open",
         "build": "webpack"
     }
 }
